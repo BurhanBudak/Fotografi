@@ -1,0 +1,238 @@
+/*Default*/
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); /*Responsive grid media query*/
+    grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
+    place-items: stretch stretch;
+    justify-content: space-around;
+    align-content:  space-around;
+    text-align: center;
+    grid-gap: 30px;
+    /* position: relative; */
+
+}
+/*Header och Nav*/
+header{
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 10px;
+    align-items: center;
+    justify-content: end;
+    background: linear-gradient(to left, yellow 50%,black 50%);
+    z-index: 2;
+}
+.center{
+    color:black;
+    grid-column: 2;
+}
+
+.toggle{
+    width: 80px;
+    height: 100px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 3;
+    position: fixed;
+    transition: ease-in-out;
+}
+.burger1,.burger2,.burger3{
+    width: 50px;
+    margin: 5px;
+    padding: 4px;
+    background-color: yellow;
+    transition: 0.5s ease;
+}
+.change .toggle{
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.change .burger1{
+    transform: rotate(-45deg) translate(-18px, 18px);
+}
+.change .burger2{ opacity: 0;}
+
+.change .burger3{
+    transform: rotate(45deg) translate(-20px, -20px);
+}
+.sidenav{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 1; /* Needs to sit above the hamburger menu icon */
+    background-color: black;
+    transform: translateX(-710px);
+    transition: all .6s ease-in-out;
+    
+}
+.sidenav ul {
+    padding: 0;
+    margin-top: 100px;
+    list-style-type: none;
+}
+.sidenav li{
+    padding: 50px 10px 10px 30px;
+}
+.sidenav li a {
+    color: yellow;
+    padding-bottom: 5px;
+}
+.sidenav li:focus {
+    cursor: pointer;
+}
+.active {
+    transform: translateX(0);
+}
+.horisontellnav{
+    display: none;
+}
+
+a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 4px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+a:hover::after {
+    width: 100%;
+    background: red;
+}
+/*Dator*/
+@media screen and (min-width: 720px){
+    .toggle{
+        display: none;
+    }
+    .sidenav {
+        display: none;
+      }
+    .horisontellnav{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .horisontellnav a{
+        color: black;
+        padding-bottom: 3px;
+    }
+    .card-back{
+        display: none;
+    }
+}
+/*Meny*/
+
+/*Main innehåll*/
+.grid-item {
+	color: #fff;
+	height: 300px;
+	margin: auto;
+	padding: 0;
+	width: 300px;
+    position: relative;
+    background-color: transparent;
+    perspective: 1000px;
+}
+.flex-item-inner {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	height: 300px;
+	margin: 0;
+	padding: 0;
+    width: 100%;
+    cursor: pointer;
+}
+/*-------- cards --------*/
+.card-front,
+.card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	padding: 20px;
+	margin: 0;
+	backface-visibility: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.card-back p{
+    margin: auto;
+}
+.card-back p.title {
+	margin-top: 1rem;
+	text-transform: uppercase;
+}
+.card-back p.desc {
+	color: white
+}
+.card-back p.link {
+	color: #702082;
+}
+
+/*-------- backcards / flip/blur effect --------*/
+.front-blur{
+    filter: blur(5px);
+}
+.back-flip{
+    transform: rotateY(0);
+}
+img{
+    width:100%;
+    height: 100%;
+}
+
+.button{
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align:center;
+    transition: all 0.2s;
+    order: 2;
+}
+.button:hover{
+        background-color:#4095c6;
+}
+
+.camera{
+    font-size: 2rem;
+}
+footer{
+    grid-column: 1/-1;
+    grid-row-end: auto;
+}
+.adress{
+    padding: 2rem;
+}
+

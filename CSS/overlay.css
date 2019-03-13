@@ -1,0 +1,47 @@
+@media screen and (min-width: 720px){
+    .preview{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+    .open{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .preview-inner{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 700px;
+        padding: 10px;
+      }
+      .preview img {
+        width: 100%;
+      }
+      .prev, .next{
+        cursor: pointer;
+        width: auto;
+        padding: 16px;
+        color:white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 2;
+      }
+      .close{
+          background: none;
+          color: red;
+          border: 0;
+          font-size: 2rem;
+      }
+}
+section{
+    display: none; /*SÅ ATT OVERLAY IN SKA SYNAS*/
+}
