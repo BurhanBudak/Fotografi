@@ -150,8 +150,8 @@ a:hover::after {
 /*Meny*/
 
 /*Main innehåll*/
-.grid-item {
-	color: #fff;
+.flex-item-inner {
+    color: #fff;
 	height: 300px;
 	margin: auto;
 	padding: 0;
@@ -159,8 +159,6 @@ a:hover::after {
     position: relative;
     background-color: transparent;
     perspective: 1000px;
-}
-.flex-item-inner {
 	display: flex;
 	flex-direction: column;
     justify-content: center;
@@ -170,6 +168,7 @@ a:hover::after {
 	padding: 0;
     width: 100%;
     cursor: pointer;
+    border-radius: 5px;
 }
 /*-------- cards --------*/
 .card-front,
@@ -237,6 +236,7 @@ img{
 footer{
     grid-column: 1/-1;
     grid-row-end: auto;
+    text-align: center;
 }
 .adress{
     padding: 2rem;
