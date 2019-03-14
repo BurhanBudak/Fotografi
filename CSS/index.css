@@ -154,7 +154,7 @@ a:hover::after {
 .flex-item-inner {
     color: #fff;
 	height: 300px;
-	width: 300px;
+	width: 350px;
 	margin: auto;
     position: relative;
     perspective: 1000px;
