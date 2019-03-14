@@ -14,8 +14,8 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); /*Responsive grid media query*/
     grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
     place-items: stretch stretch;
-    justify-content: space-around;
-    align-content:  space-around;
+    justify-content: space-between;
+    align-content:  space-between;
     text-align: center;
     grid-gap: 20px;
 
@@ -58,6 +58,7 @@ header{
     margin: 5px;
     padding: 4px;
     background-color: yellow;
+    border: 3px solid black;
     transition: 0.5s ease;
 }
 .change .toggle{
@@ -153,20 +154,14 @@ a:hover::after {
 .flex-item-inner {
     color: #fff;
 	height: 300px;
-	margin: auto;
-	padding: 0;
 	width: 300px;
+	margin: auto;
     position: relative;
-    background-color: transparent;
     perspective: 1000px;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
     align-items: center;
-	height: 300px;
-	margin: 0;
-	padding: 0;
-    width: 100%;
     cursor: pointer;
     border-radius: 5px;
 }

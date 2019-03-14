@@ -17,6 +17,7 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
 );
 function change(e) {
     let src = e.currentTarget.querySelector('img').src;
+    console.log(e)
             previewImage.src = src;
             preview.classList.add('open');
 }
