@@ -24,6 +24,7 @@
       }
       .preview img {
         width: 100%;
+        height: ;
       }
       .prev, .next{
         cursor: pointer;
