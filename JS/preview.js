@@ -1,4 +1,6 @@
 let flexs = document.querySelectorAll('.flex-item-inner');
+let images = document.querySelectorAll('.i');
+console.log(images);
 let preview = document.querySelector('.preview');
 let previewImage = preview.querySelector('img');
 let previewClose= preview.querySelector('.close');
