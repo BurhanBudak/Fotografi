@@ -3,7 +3,7 @@
     grid-template-rows: 1fr;
     justify-content: space-between;
     width: 800px;
-    height: 397px;
+    height: 500px;
     position: relative;
     overflow: hidden;
   }
@@ -38,13 +38,12 @@
   .next{
     grid-column: 3;
   }
-  /* .carouselbox button {
-    border: none;
-    display: none;
-  } */
   .active button {
     display: block;
   } 
+figcaption{
+  color: white;
+}
   /* .offscreen {
     position: absolute;
     left: -2000px;
