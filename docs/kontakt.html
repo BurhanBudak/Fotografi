@@ -39,22 +39,24 @@
                         </ul>
                 </div>
         <div class="contact"> <!--Höger-->
-                <form action="">
+                <h3>Kontakt oss</h3>
+                <div class="response">Ditt meddelande har skickats</div>
+                <form class="contactForm">
                 <p>
                         <label for="name">Namn</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe">
+                        <input type="text" name="name" id="name" placeholder="John Doe" required>
                 </p>
                 <p>
                         <label for="mail">E-mail Adress</label>
-                        <input type="email" name="mail" id="mail" placeholder="E-mail">
+                        <input type="email" name="mail" id="mail" placeholder="E-mail" required>
                 </p>
                 <p>   
                         <label for="subject">Ämne</label>
-                        <input type="text" name="subject" id="sub" placeholder="Möte">
+                        <input type="text" name="subject" id="sub" placeholder="Möte" required>
                 </p>
                 <p>   
                         <label for="phone">Telefonummer</label>
-                        <input type="text" name="phone" id="nr" placeholder="123">
+                        <input type="text" name="phone" id="nr" placeholder="123" required>
                 </p>
                 <p class="wide">
                         <label for="message">Meddelande</label>
@@ -78,5 +80,6 @@
         </footer>
     </div>
     <script src="../JS/toggle.js"></script>
+    <script src="../JS/contact.js"></script>
 </body>
 </html>
