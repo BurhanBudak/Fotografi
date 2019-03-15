@@ -28,9 +28,10 @@
                 <a href="index.html">Hem</a>
                 <a href="kontakt.html">Kontakt</a>
         </aside>
+        
         <div class="inputfield">
                 <div class="info"> <!--Vänster-->
-                        <h3>Kontakta oss!</h3>
+                        <h3>Fotografi📷AB</h3>
                         <ul>
                         <li>Tomtebodavägen 3A</li>
                         <li>171 65 Solna</li>
@@ -40,29 +41,31 @@
                         </ul>
                 </div>
         <div class="contact"> <!--Höger-->
-                <form >
+                <h3>Kontakt oss</h3>
+                <div class="response">Ditt meddelande har skickats</div>
+                <form id="contactForm">
                 <p>
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe">
+                        <input type="text" name="name" id="name" placeholder="John Doe" required>
                 </p>
                 <p>
-                        <label for="mail">E-mail Adress</label>
-                        <input type="email" name="mail" id="mail" placeholder="E-mail">
+                        <label for="email">E-mail Adress</label>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
                 </p>
                 <p>   
                         <label for="subject">Ämne</label>
-                        <input type="text" name="subject" id="subject" placeholder="Ämne">
+                        <input type="text" name="subject" id="subject" placeholder="Ämne" required>
                 </p>
                 <p>   
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" placeholder="Telefonnummer">
+                        <label for="phone">Telefon</label>
+                        <input type="text" name="phone" id="phone" placeholder="Telefonnummer" required>
                 </p>
                 <p class="wide">
                         <label for="message">Message</label>
                         <textarea name="message" id="message" placeholder="Text meddelande"></textarea>
                 </p>
                 <p class="wide">
-                        <button type="submit" class="button" >Submit</button>
+                        <button type="submit" class="button" >Skicka</button>
                 </p>
                 </form>
         </div>
@@ -79,5 +82,8 @@
         </footer>
     </div>
     <script src="./JS/toggle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="./JS/contact.js"></script>
+
 </body>
 </html>

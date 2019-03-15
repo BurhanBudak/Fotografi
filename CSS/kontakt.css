@@ -119,34 +119,7 @@ a:hover::after {
     width: 100%;
     background: red;
 }
-/*LITEN SKÄRM*/
-@media screen and (min-width: 720px){
-    .toggle{
-        display: none;
-    }
-    .sidenav {
-        display: none;
-      }
-      .horisontellnav{
-        grid-column: 1 / -1;
-        grid-row: 2;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .horisontellnav a{
-        color: black;
-        padding-bottom: 3px;
-    }
-    .inputfield{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        text-align: left;
-    }
-    .inputfield > *{
-        padding: 2rem;
-    }
-} /*Stor skärm*/
+
 
 
 /* Contact */
@@ -164,6 +137,14 @@ a:hover::after {
 .info{
     background-color: rgba(255, 255, 53, 0.63);
 
+}
+.response{
+    text-align: center;
+    padding:10px;
+    background:#79c879;
+    color:#fff;
+    margin-bottom:10px;
+    display:none;
 }
 .info h3, .info ul{
     margin: 0 1rem 1rem 0;
@@ -214,3 +195,32 @@ footer{
 .adress{
     padding: 2rem;
 }
+
+/*LITEN SKÄRM*/
+@media screen and (min-width: 720px){
+    .toggle{
+        display: none;
+    }
+    .sidenav {
+        display: none;
+      }
+      .horisontellnav{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .horisontellnav a{
+        color: black;
+        padding-bottom: 3px;
+    }
+    .inputfield{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+    .inputfield > *{
+        padding: 2rem;
+    }
+} /*Stor skärm*/
