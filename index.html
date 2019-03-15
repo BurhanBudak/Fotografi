@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta description="Huvudsidan för projektarbete 2">
     <link rel="stylesheet" href="./CSS/index.css">
     <link rel="stylesheet" href="./CSS/overlay.css">
+    <link rel="stylesheet" href="./CSS/slide.css">
     <title>Fotografi📷AB</title>
-    <!--DOES NOT WORK ON OLD IE BROWSERS OR SMALL CHINESE BROWESERS.
-        EVERYTHING ELSE WORKS-->
 </head>
 <body>
     <div class="container">
@@ -22,13 +22,13 @@
         </header>
         <aside class="sidenav">
                 <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="kontakt.html">Contact</a></li>
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
         </aside>
         <aside class="horisontellnav">
-                <a href="index.html">Home</a>
-                <a href="kontakt.html" >Contact</a>
+                <a href="index.html">Hem</a>
+                <a href="kontakt.html" >Kontakt</a>
         </aside>
 
 
@@ -36,10 +36,27 @@
         <!--Carosoul-->
         <section class="preview">
                 <button class="close">&#10006;</button>
-                <div class="preview-inner">
-                <button class="prev">&#10094;</button>
-                <img src="" id='slide' alt="placeholder">
-                <button class="next">&#10095;</button>
+                                <div class="carouselbox active">
+                <button class="prev">
+                <span class="offscreen">&#10094;</span>
+                </button>
+                <button class="next">
+                <span class="offscreen">&#10095;</span>
+                </button>
+                <ol class="content">
+                <li><img src="./img/1.jpeg" alt="bild1"></li>
+                <li><img src="./img/2.jpeg" alt="bild2"></li>
+                <li><img src="./img/3.jpeg" alt="bild3"></li>
+                <li><img src="./img/4.jpeg" alt="bild4"></li>
+                <li><img src="./img/5.jpeg" alt="bild5"></li>
+                <li><img src="./img/6.jpeg" alt="bild6"></li>
+                <li><img src="./img/7.jpeg" alt="bild7"></li>
+                <li><img src="./img/8.jpeg" alt="bild8"></li>
+                <li><img src="./img/9.jpeg" alt="bild9"></li>
+                <li><img src="./img/10.jpeg" alt="bild10"></li>
+                <li><img src="./img/11.jpeg" alt="bild11"></li>
+                <li><img src="./img/12.jpeg" alt="bild12"></li>
+                </ol>
                 </div>
         </section>
         <!--Carosoul-->
@@ -50,7 +67,7 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/1.jpeg" alt="bild1" class="i">
+<img src="./img/1.jpeg" alt="bild1" id="0">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -65,11 +82,10 @@
 </div>
 <!-- /card -->
 </div>
-<!-- <button class="button">Köp nu</button> -->
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-        <img src="./img/2.jpeg" alt="bild2" class="i">
+        <img src="./img/2.jpeg" alt="bild2" id="1">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -84,10 +100,11 @@
 </div>
 <!-- /card -->
 </div>
+
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-        <img src="./img/3.jpeg" alt="bild3" class="i">
+        <img src="./img/3.jpeg" alt="bild3" id="2">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -105,7 +122,7 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-        <img src="./img/4.jpeg" alt="bild4" class="i">
+        <img src="./img/4.jpeg" alt="bild4" id="3">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -123,7 +140,7 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front "> <!--front-->
-        <img src="./img/5.jpeg" alt="bild5" class="i">
+        <img src="./img/5.jpeg" alt="bild5" id="4">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -141,7 +158,7 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/6.jpeg" alt="bild6" class="i">
+<img src="./img/6.jpeg" alt="bild6" id="5">
 </div>
 <div class="card-back "> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -156,28 +173,11 @@
 </div>
 <!-- /card -->
 </div>
+
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front "> <!--front-->
-<img src="./img/7.jpeg" alt="bild7" class="i">
-</div>
-<div class="card-back "> <!--back-->
-<p class="title">Lorem ipsum dolor sit amet</p>
-<ul>
-<li>Shutter speed: 1/20</li>
-<li>ISO: 800</li>
-<li>Apeture: <i>f</i>1.5</li>
-<li>Exposure: Auto</li>
-</ul>
-<p class="desc">Pellentesque magna nunc, fermentum nec ipsum non, consequat scelerisque dui.</p>
-<p class="link">Details </p>
-</div>
-<!-- /card -->
-</div>
-<div class="flex-item-inner">
-<!-- .card -->
-<div class="card-front"> <!--front-->
-<img src="./img/8.jpeg" alt="bild8" class="i">
+<img src="./img/7.jpeg" alt="bild7" id="6">
 </div>
 <div class="card-back "> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -196,9 +196,9 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/9.jpeg" alt="bild9" class="i">
+<img src="./img/8.jpeg" alt="bild8" id="7">
 </div>
-<div class="card-back"> <!--back-->
+<div class="card-back "> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
 <ul>
 <li>Shutter speed: 1/20</li>
@@ -207,14 +207,15 @@
 <li>Exposure: Auto</li>
 </ul>
 <p class="desc">Pellentesque magna nunc, fermentum nec ipsum non, consequat scelerisque dui.</p>
-<p class="link">Details</p>
+<p class="link">Details </p>
 </div>
 <!-- /card -->
 </div>
+
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/10.jpeg" alt="bild10" class="i">
+<img src="./img/9.jpeg" alt="bild9" id="8">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -233,7 +234,7 @@
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/11.jpeg" alt="bild11" class="i">
+<img src="./img/10.jpeg" alt="bild10" id="9">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -248,10 +249,11 @@
 </div>
 <!-- /card -->
 </div>
+
 <div class="flex-item-inner">
 <!-- .card -->
 <div class="card-front"> <!--front-->
-<img src="./img/12.jpeg" alt="bild12" class="i">
+<img src="./img/11.jpeg" alt="bild11" id="10">
 </div>
 <div class="card-back"> <!--back-->
 <p class="title">Lorem ipsum dolor sit amet</p>
@@ -265,6 +267,27 @@
 <p class="link">Details</p>
 </div>
 <!-- /card -->
+</div>
+
+<div class="flex-item-inner">
+<!-- .card -->
+<div class="card-front"> <!--front-->
+<img src="./img/12.jpeg" alt="bild12" id="11">
+</div>
+<div class="card-back"> <!--back-->
+<p class="title">Lorem ipsum dolor sit amet</p>
+<ul>
+<li>Shutter speed: 1/20</li>
+<li>ISO: 800</li>
+<li>Apeture: <i>f</i>1.5</li>
+<li>Exposure: Auto</li>
+</ul>
+<p class="desc">Pellentesque magna nunc, fermentum nec ipsum non, consequat scelerisque dui.</p>
+<p class="link">Details</p>
+</div>
+<!-- /card -->
+</div>
+
 </div>
 <footer>
 <a href="#top" class="camera" title="GO TOP">📷</a>
@@ -277,5 +300,6 @@ Telefon: <p>08-XXX XX XX</p> <br>
     </div>
     <script src="./JS/toggle.js"></script>
     <script src="./JS/preview.js"></script>
+    <!-- <script src="../JS/slide.js"></script> -->
 </body>
 </html>

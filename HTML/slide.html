@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/slide.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+        <!--Carosoul-->
+    <!-- <div class="slider">
+            
+            <div class="slides">
+                <div class="slide" id="slide-1"><img src="../img/1.jpeg" alt=""></div>
+                <div class="slide" id="slide-2"><img src="../img/2.jpeg" alt=""></div>
+                <div class="slide" id="slide-3"><img src="../img/3.jpeg" alt=""></div>
+                <div class="slide" id="slide-4"><img src="../img/4.jpeg" alt=""></div>
+                <div class="slide" id="slide-5"><img src="../img/5.jpeg" alt=""></div>
+            </div>
+            <a href="#slide-1"><img src="../img/1.jpeg" alt=""></a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+            <a href="#slide-4">4</a>
+            <a href="#slide-5">5</a>
+    </div> -->
+    <div class="carouselbox active">
+            <!-- <div class="buttons"> -->
+              <button class="prev">
+                ◀ <span class="offscreen">&#10094;</span>
+              </button>
+              <button class="next">
+                <span class="offscreen">&#10095;</span> ▶ 
+              </button>
+            <!-- </div> -->
+            <ol class="content">
+              <li><img src="../img/1.jpeg" alt=""></li>
+              <li><img src="../img/2.jpeg" alt=""></li>
+              <li><img src="../img/3.jpeg" alt=""></li>
+              <li><img src="../img/4.jpeg" alt=""></li>
+            </ol>
+          </div>
+</div>
+
+<!--Carosoul-->
+    <script>
+    let carousel = (function(){
+  let box = document.querySelector('.carouselbox');
+  let next = box.querySelector('.next');
+  let prev = box.querySelector('.prev');
+  let items = box.querySelectorAll('.content li');
+  let counter = 0;
+  let amount = items.length;
+  let current = items[0];
+  box.classList.add('active');
+  function navigate(direction) {
+    current.classList.remove('current');
+    counter = counter + direction;
+    if (direction === -1 && 
+        counter < 0) { 
+      counter = amount - 1; 
+    }
+    if (direction === 1 && 
+        !items[counter]) { 
+      counter = 0;
+    }
+    current = items[counter];
+    current.classList.add('current');
+  }
+  next.addEventListener('click', function(ev) {
+    navigate(1);
+  });
+  prev.addEventListener('click', function(ev) {
+    navigate(-1);
+  });
+  navigate(0);
+})();
+    </script>
+</body>
+</html>

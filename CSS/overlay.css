@@ -15,16 +15,17 @@
         align-items: center;
         justify-items: center;
     }
-    .preview-inner{
+    /* .preview-inner{
         display: flex;
         flex-direction: row;
         align-items: center;
+        background-color: white;
         width: 700px;
         padding: 10px;
-      }
+      } */
       .preview img {
         width: 100%;
-        height: ;
+        height: 100% ;
       }
       .prev, .next{
         cursor: pointer;
