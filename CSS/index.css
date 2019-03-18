@@ -14,7 +14,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); /*Responsive grid media query*/
     grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
     place-items: stretch stretch;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content:  space-between;
     text-align: center;
     grid-gap: 20px;
@@ -143,6 +143,7 @@ a:hover::after {
     .horisontellnav a{
         color: black;
         padding-bottom: 3px;
+        font-size: 1.5rem;
     }
     .card-back{
         display: none;

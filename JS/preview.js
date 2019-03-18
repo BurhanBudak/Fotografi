@@ -14,26 +14,17 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
     }
 
     })//event
-);//forEach
-// previewClose.addEventListener('click', close);
-// function close() {
-//     current.classList.remove('current');
-//     preview.classList.remove('open');
-// }
+);
 
-// let carousel = (
-  function carousel(e){ //IFFI
+  function carousel(e){
     let box = document.querySelector('.carouselbox');
     let next = box.querySelector('.next');
     let prev = box.querySelector('.prev');
     let items = box.querySelectorAll('.content li');
     let i = Number(e.currentTarget.querySelector('.card-front img').id);
-    console.log(i);
-    let counter = i; 
-    let amount = items.length;
-    console.log(items.length);
-    let current = items[i];
-    console.log(current);
+    let counter = i; //Ger den aktuella talet vid klick
+    let amount = items.length; //Nodelista
+    let current = items[i]; //Aktuella positionen
     box.classList.add('active');
     function navigate(direction) {
       current.classList.remove('current');
@@ -41,22 +32,37 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
       if (direction === -1 && counter < 0) { 
         counter = amount - 1; 
       }
-      if (direction === 1 &&  !items[counter]) { 
+      if (direction === 1 &&  counter>11) { 
         counter = 0;
       }
       current = items[counter];
-      console.log(current);
+      console.log(counter);
       current.classList.add('current');
     }//Navigator
     previewClose.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) {
+      if(e.key == 'Escape') {
+        close();
+      }
+    });
     function close() {
-    current.classList.remove('current');
-    preview.classList.remove('open');
-    }
-    next.addEventListener('click', function(ev) {
+      counter = 0; //Nollställer
+      console.log(counter);
+      current.classList.remove('current');
+      preview.classList.remove('open');
+    };
+    document.addEventListener('keydown', function(e){
+      if (e.keyCode == 39) {
+        navigate(1); //fram
+      }
+      else if(e.keyCode == 37){
+        navigate(-1); //back
+      }
+    });
+    next.addEventListener('click', function() {
       navigate(1); //fram
     });
-    prev.addEventListener('click', function(ev) {
+    prev.addEventListener('click', function() {
       navigate(-1); //back
     });
     navigate(0);
