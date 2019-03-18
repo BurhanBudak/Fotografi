@@ -10,15 +10,16 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
     }
     else{
         preview.classList.add('open');
-        // let index = Number(e.currentTarget.querySelector('.card-front img').id);
         carousel(e);
     }
+
     })//event
 );//forEach
-previewClose.addEventListener('click', close);
-function close() {
-    preview.classList.remove('open');
-}
+// previewClose.addEventListener('click', close);
+// function close() {
+//     current.classList.remove('current');
+//     preview.classList.remove('open');
+// }
 
 // let carousel = (
   function carousel(e){ //IFFI
@@ -26,27 +27,31 @@ function close() {
     let next = box.querySelector('.next');
     let prev = box.querySelector('.prev');
     let items = box.querySelectorAll('.content li');
-    let counter = 0; 
-    let amount = items.length;
     let i = Number(e.currentTarget.querySelector('.card-front img').id);
     console.log(i);
-    console.log(typeof i);
-    let current = items[i]; 
+    let counter = i; 
+    let amount = items.length;
+    console.log(items.length);
+    let current = items[i];
     console.log(current);
     box.classList.add('active');
     function navigate(direction) {
       current.classList.remove('current');
       counter = counter + direction;
-      if (direction === -1 && 
-          counter < 0) { 
+      if (direction === -1 && counter < 0) { 
         counter = amount - 1; 
       }
-      if (direction === 1 && 
-          !items[counter]) { 
+      if (direction === 1 &&  !items[counter]) { 
         counter = 0;
       }
       current = items[counter];
+      console.log(current);
       current.classList.add('current');
+    }//Navigator
+    previewClose.addEventListener('click', close);
+    function close() {
+    current.classList.remove('current');
+    preview.classList.remove('open');
     }
     next.addEventListener('click', function(ev) {
       navigate(1); //fram
