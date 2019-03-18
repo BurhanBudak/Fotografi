@@ -10,8 +10,8 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
     }
     else{
         preview.classList.add('open');
-        let index = Number(e.currentTarget.querySelector('.card-front img').id);
-        carousel(index);
+        // let index = Number(e.currentTarget.querySelector('.card-front img').id);
+        carousel(e);
     }
     })//event
 );//forEach
@@ -21,15 +21,18 @@ function close() {
 }
 
 // let carousel = (
-  function carousel(index){ //IFFI
-    console.log(index);
+  function carousel(e){ //IFFI
     let box = document.querySelector('.carouselbox');
     let next = box.querySelector('.next');
     let prev = box.querySelector('.prev');
     let items = box.querySelectorAll('.content li');
     let counter = 0; 
     let amount = items.length;
-    let current = items[0]; 
+    let i = Number(e.currentTarget.querySelector('.card-front img').id);
+    console.log(i);
+    console.log(typeof i);
+    let current = items[i]; 
+    console.log(current);
     box.classList.add('active');
     function navigate(direction) {
       current.classList.remove('current');
