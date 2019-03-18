@@ -23,47 +23,45 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
     let items = box.querySelectorAll('.content li');
     let i = Number(e.currentTarget.querySelector('.card-front img').id);
     let counter = i; //Ger den aktuella talet vid klick
-    let amount = items.length; //Nodelista
-    let current = items[i]; //Aktuella positionen
+    let amount = 12; //Nodelista
+    let current = items[i]; //Aktuell bild man har valt
     box.classList.add('active');
     function navigate(direction) {
       current.classList.remove('current');
       counter = counter + direction;
-      if (direction === -1 && counter < 0) { 
+      if (counter < 0) { 
         counter = amount - 1; 
       }
-      if (direction === 1 &&  counter>11) { 
+      if (counter>11) { 
         counter = 0;
       }
-      current = items[counter];
-      console.log(counter);
-      current.classList.add('current');
+        current = items[counter];
+        console.log(counter);
+        current.classList.add('current');
     }//Navigator
     previewClose.addEventListener('click', close);
-    document.addEventListener('keydown', function (e) {
-      if(e.key == 'Escape') {
-        close();
-      }
-    });
-    function close() {
-      counter = 0; //Nollställer
-      console.log(counter);
-      current.classList.remove('current');
-      preview.classList.remove('open');
-    };
-    document.addEventListener('keydown', function(e){
-      if (e.keyCode == 39) {
-        navigate(1); //fram
-      }
-      else if(e.keyCode == 37){
-        navigate(-1); //back
-      }
-    });
     next.addEventListener('click', function() {
       navigate(1); //fram
     });
     prev.addEventListener('click', function() {
       navigate(-1); //back
     });
+    document.addEventListener('keydown', function (e) {
+      if(e.key == 'Escape') {
+        close();
+      }
+      else if (e.keyCode == 39) {
+        navigate(1); //fram
+      }
+      else if(e.keyCode == 37){
+        navigate(-1); //back
+      }
+    });
+    function close() {
+      console.log(counter);
+      current.classList.remove('current');
+      preview.classList.remove('open');
+      return counter = 0; //Nollställer
+    };
     navigate(0);
   };
