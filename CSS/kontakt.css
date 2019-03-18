@@ -54,6 +54,7 @@ header{
     padding: 4px;
     background-color: yellow;
     transition: 0.5s ease;
+    border: 2px solid black;
 }
 .change .toggle{
     padding: 10px;
