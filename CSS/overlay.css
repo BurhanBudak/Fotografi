@@ -33,8 +33,9 @@
       .close{
           background: none;
           color: red;
-          border: 0;
+          border: solid ;
           font-size: 2rem;
+          border-radius: 50%;
       }
 }
 section{

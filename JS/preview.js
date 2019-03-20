@@ -1,5 +1,5 @@
 let flexs = document.querySelectorAll('.flex-item-inner');
-let box = document.querySelector('.carouselbox');
+
 let preview = document.querySelector('.preview');
 let previewClose= preview.querySelector('.close');
 
@@ -18,8 +18,8 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
 
   function carousel(e){
     let box = document.querySelector('.carouselbox');
-    let next = box.querySelector('.next');
-    let prev = box.querySelector('.prev');
+    let next = preview.querySelector('.next');
+    let prev = preview.querySelector('.prev');
     let items = box.querySelectorAll('.content li');
     let i = Number(e.currentTarget.querySelector('.card-front img').id);
     let counter = i; //Ger den aktuella talet vid klick
