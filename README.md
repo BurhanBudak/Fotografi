@@ -1,1 +1,2 @@
-#  https://burhanbudak.github.io/Projekt2/
+#  https://burhanbudak.github.io/Fotografi/
+#Här mitt arbete som beställdes av Magnus
