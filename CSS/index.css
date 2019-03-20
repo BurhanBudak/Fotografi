@@ -11,7 +11,7 @@ html {
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); /*Responsive grid media query*/
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); /*Responsive grid media query*/
     grid-template-rows: repeat(auto-fit, minmax(100px,1fr));
     place-items: stretch stretch;
     justify-content: space-around;
