@@ -11,12 +11,11 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
         preview.classList.add('open');
         carousel(e);
     }
-
     })//event
 );
 
 
-  function carousel(e,direction){
+  function carousel(e){
     let box = document.querySelector('.carouselbox');
     let next = preview.querySelector('.next');
     let prev = preview.querySelector('.prev');
@@ -28,16 +27,15 @@ flexs.forEach(flexItemInner => flexItemInner.addEventListener('click', (e) => {
     function navigate(direction) {
       current.classList.remove('current');
       counter = counter + direction;
-      if (counter < 0) { 
+      if(counter < 0) { 
         counter = 11;
       }
-      if (counter > 11) { 
+      if(counter > 11) { 
         counter = 0;
       }
-        current = items[counter];
-        console.log(counter);
-        console.log(current);
-        current.classList.add('current');
+      current = items[counter];
+      console.log(counter);
+      current.classList.add('current');
     }//Navigator
     previewClose.addEventListener('click', close);
     next.addEventListener('click', function() {
